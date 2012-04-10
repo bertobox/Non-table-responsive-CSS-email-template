@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Invitación a EXPO ARTCOM otoño 2011</title>
+  <meta name="description" content="Invitación Expo ARTCOM otoño 2011">
+  <meta name="author" content="Robert Valencia">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/png" href="img/favicon-2012-bw-2.png">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon-2011.png">
+  <style type="text/css" media="screen">
+    /**
+    * PLANTILLA RESPONSIVA PARA EMAILS
+    * (diseñada originalmente como plantilla para invitaciones para la Expo ARTCOM)
+    * 
+    * @author Robert Valencia <robert@robertvalencia.com>
+    * @version 1 español
+    * @copyright Copyright ©2010, 2011, 2012 Robert Valencia
+    * 
+    * ...
+    * COLORES
+    * @colordef #D43514 or rgb(212,53,20); naranja profundo; para el fondo
+    * @colordef #20262B or rgb(32,38,43); azulgris oscuro; para fondo alterno
+    * @colordef #C8C8C8 or rgb(200,200,200); gris claro; para un borde alterno del mensaje
+    * ...
+    */
+
+
+    /**
+    * Resets globales
+    * 
+    * Primero, eliminamos los margenes en 
+    * el <body>, la .envoltura_externa del <table> o <div>,
+    * el encabezado .hd, el pie de página .ft
+    */
+    body, .envoltura_externa, .hd, .ft{margin:0;padding:0;}
+
+
+    /**
+    * Ahora, fijamos el color e imagen de fondo y el tamaño de la tipografía
+    */
+    body{background: #D43514 url('img/o2011-expo-artcom-3W-bk.png') repeat;font-size: 100%;}
+
+
+    /**
+    * ‘Padding’ (margen interno) para la .envoltura_externa
+    * 
+    * Esto crea un margen entre el fondo y la ‘página del mensaje’
+    * que estará presente alrededor, para que dicha ‘página’
+    * no se extienda hasta el borde.
+    */
+    .envoltura_externa{padding:1em;}
+
+
+    /**
+    * ‘Padding’ (margen interno) para la .envoltura_interna
+    * 
+    * Fija un espacio mínimo entre el texto del mensaje
+    * y el borde de la ‘página del mensaje’, para que 
+    * se vea bien aún al visualizarlo en una pantalla angosta.
+    */
+    .envoltura_interna{padding:1em;}
+
+
+    /**
+    * Fija el color blanco de fondo en la zona del mensaje,
+    * una medida máxima de anchura y centra el mensaje en el fondo.
+    */
+    .envoltura_interna{background-color: white;max-width: 600px;margin: 0 auto;}
+
+
+    /**
+    * Aplica un margen interno al mensaje, para separarlo del borde.
+    */
+    .hd,.area_principal,.ft{max-width:520px; margin:0 auto;}
+
+
+    /**
+    * HEADER - Encabezado
+    *
+    * Alinea texto e imágenes al centro, establece la tipografía
+    * que usará el texto descriptivo de las imágenes, en caso de no verse.
+    */
+    .hd{text-align: center;}
+    .hd img{text-align: center;font-family: Arial, Helvetica, sans-serif; font-size: 9px;}
+
+
+    /**
+    *Tipografía
+    * 
+    * Especifíca las fuentes tipográficas que deben usarse
+    * y el orden en que deben mostrarse, en caso que el dispositivo
+    * no tenga la primera opción de fuentes.
+    */
+    h1,h2,h3,h4,h5,h6,p{font-family: Georgia, "Palatino-Roman", "PalatinoLinotype-Roman", Times, serif;}
+
+
+    /**
+    * Aplica un mismo tipo de interlineado (de 180%)
+    * a los siguientes elementos:
+    *          p (párrafos), 
+    *         li (ítems de lista),
+    *         ul (listas sin orden/viñetas),
+    * blockquote (textos citados en bloque),
+    *         dl (listas de deficinición)
+    */
+    p,li,ul,blockquote,dl{line-height: 1.8;}
+    
+    /**
+    * FOOTER - Pie de página
+    */
+    .ft{padding-bottom: 80px;}
+    
+
+    /** 
+    * Especifica los párrafos en el pie de página,
+    * tipografía más pequeña (11px), de palo seco,
+    * con interlineado de 180%, alineado al centro
+    * y de color gris.
+    */
+    .ft p{font-size: 11px; font-family: Arial, Helvetica, sans-serif; line-height: 1.8; text-align: center;
+          color: #CFCFCF;}
+
+
+    /**
+    * Componentes tipográficos reutilizables
+    * 
+    * Estas clases las puedes agregar y mezclar 
+    * en tus elementos HTML y de una forma modular 
+    * muy cómoda, podrás aplicar las características
+    * que vienen preprogramadas.
+    */
+    .small{font-size:11px;} /* hace el texto pequeño */
+    .large{font-size: 2em;} /* hace el texto grande */
+    .sans{font-family: Arial, Helvetica, sans-serif;} /* especifica tipografías de palo seco */
+    .caps{text-transform: uppercase;} /* convierte el texto a mayúsculas */
+    .gray{color: #6C6C6C;} /* aplica el color gris */
+
+
+    /**
+    * Sombra inferior
+    * 
+    * NOTA: no funciona más que con algunos clientes
+    * de email, muy contados. Aún así es un efecto muy ‘cool’!
+    */
+    .box{margin:0;padding:0 0 2em;clear:both;overflow:hidden;}
+    .bottom_shadow{position: relative;box-shadow:0 1px 4px rgba(0,0,0,0.27),0 0 40px rgba(0,0,0,0.06) inset;-webkit-box-shadow:0 1px 4px rgba(0,0,0,0.27),0 0 40px rgba(0,0,0,0.06) inset;-moz-box-shadow:0 1px 4px rgba(0,0,0,0.27),0 0 40px rgba(0,0,0,0.06) inset;}
+    .bottom_shadow:after{z-index:-1;position:absolute;background:transparent;width:70%;height:55%;content:'';right:45px;bottom:20px;transform:skew(15deg) rotate(6deg);-webkit-transform:skew(15deg) rotate(6deg);-moz-transform:skew(15deg) rotate(6deg);box-shadow:0 8px 16px rgba(0,0,0,0.3);-webkit-box-shadow:0 8px 16px rgba(0,0,0,0.3);-moz-box-shadow:0 8px 16px rgba(0,0,0,0.3);}
+    .bottom_shadow:before{z-index:-2;position:absolute;background:transparent;width:70%;height:55%;content:'';left:40px;bottom:20px;transform:skew(-15deg) rotate(-6deg);-webkit-transform:skew(-15deg) rotate(-6deg);-moz-transform:skew(-15deg) rotate(-6deg);box-shadow:0 8px 16px rgba(0,0,0,0.3);-webkit-box-shadow:0 8px 16px rgba(0,0,0,0.3);-moz-box-shadow:0 8px 16px rgba(0,0,0,0.3);}
+  </style> <!-- Aquí terminan los estilos básicos -->
+  
+  
+  <!-- 
+  A continuación siguen los estilos responsivos:
+  -->
+  
+  <style type="text/css">
+  /**
+  * Media queries - consultas de medios
+  * 
+  * NOTA: Estos ‘queries’ deben retirarse temporalmente
+  * antes de que el documento sea convertido a CSS ‘inline’;
+  * y deben insertarse nuevamente antes de enviar el documento final.
+  */
+    @media screen and (max-width:320px) {
+      .envoltura_externa {
+        padding: .4em !important;
+        font-size: .76em !important;
+      }
+      .envoltura_interna {
+        padding: .5em !important;
+      }
+      h1 {
+        font-size: 1.5em !important;
+      }
+      .ft {
+        padding-left: .5em !important;
+      }
+    }
+
+
+    /**
+    * Para dispositivos pequeños y iPhones
+    */
+    @media screen and (min-width:321px) and (max-width:640px){
+      .area_principal{font-size:.95em !important;}
+    }
+    
+    
+    /**
+    * Para el iPad y iPad2 en disposición vertical y dispositivos angostos
+    */
+    @media screen and (min-width: 641px) and (max-width:800px){
+      .area_principal{font-size:1.1em !important;}
+    }
+    
+    /**
+    * Para pantallas de computadoras, a partir de 801 pixeles.
+    */
+    @media screen and (min-width:801px){
+      .area_principal{font-size:1.1em !important;}
+    }
+    /* El trabajar responsivamente es trabajar responsablemente */
+  </style>
+</head>
+<body>
+  <div class="envoltura_externa">
+    <div class="box">
+      <div class="envoltura_interna bottom_shadow">
+    		<div class="hd">
+          <img style="padding-top:77px;padding-bottom:40px; height:170px;width:121px;" src="img/o2011-expo-artcom-header.png" alt="Expo ARTCOM otoño 2011" />
+    		</div><!-- .hd (encabezado) -->
+      	<div class="area_principal">
+      		<p>Dear Rebecca,<br />
+          Le invitamos cordialmente a la noche de premiaciones de la EXPO ARTCOM otoño 2010 · Portafolio estudiantil de fin de semestre. Comenzaremos al punto de las 7&nbsp;de&nbsp;la&nbsp;noche del jueves 2&nbsp;de&nbsp;diciembre.</p>
+
+          <p>Anunciaremos ganadores e inauguraremos la exhibición a las 19:00 horas en el Auditorio de la escuela de Medicina. ¡Te esperamos!
+          </p>
+
+      		<p>Cordialmente,</p>
+
+      		<p>Roberto Valencia<br />
+      		<span class="small sans caps gray">Coordinador de la Expo</span></p>
+      	</div><!-- .area_principal -->
+      </div><!-- .envoltura_interna -->
+    </div><!-- .box -->
+
+    <div class="ft">
+      <p>Expo ARTCOM otoño 2011 · Portafolio&nbsp;estudiantil&nbsp;de&nbsp;fin&nbsp;de&nbsp;semestre<br />
+  		<span class="large">❧</span><br />
+  		©2011 Artes y Comunicación<br />
+  		+52 826 263 0951 · <a class="email" href="mailto:&#x61;&#x72;&#x74;&#x63;&#x6f;&#x6d;&#x75;&#x6e;&#x69;&#x64;&#x61;&#x64;&#x40;&#x75;&#x6d;&#x2e;&#x65;&#x64;&#x75;&#x2e;&#x6d;&#x78;" style="text-decoration: none; color:#CFCFCF;" onmouseover="this.style.textDecoration = 'underline'" onmouseout="this.style.textDecoration = 'none'">&#x61;&#x72;&#x74;&#x63;&#x6f;&#x6d;&#x75;&#x6e;&#x69;&#x64;&#x61;&#x64;&#x40;&#x75;&#x6d;&#x2e;&#x65;&#x64;&#x75;&#x2e;&#x6d;&#x78;</a><br />
+  		Libertad 1300 Pte. CP 67530, Montemorelos, NL, Mexico</p>
+    </div><!-- .ft (pie de página) -->
+  </div><!-- #artcom_outerwrap -->
+</body>
+</html>
